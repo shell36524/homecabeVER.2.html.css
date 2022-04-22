@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d4b88f7572.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="join_권보경.css">
+    <script defer src="join_권보경.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header th:fragment="fragment-global">
+        <div class="inner">
+          <!-- 로고 -->
+          <a href="" th:href="@{/}" class="logo"><img src="" th:src="@{/img/logo.jpg}" alt="" width="150px" height="100px"></a>
+          <!-- 상단 메뉴 -->
+          <nav class="category" >
+            <ul class="menu">
+              <li>
+                <a href="#"><span>분야별 레시피</span></a>
+                <ul>
+                  <li><a href="#" th:href="@{/board/1?cateNum=11}"><span>제과</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=12}"><span>제빵</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=13}"><span>음료</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=14}"><span>노오븐 베이킹</span></a></li>
+                </ul>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#"><span>테마별 레시피</span></a>
+                <ul>
+                  <li><a href="#" th:href="@{/board/1?cateNum=21}"><span>발렌타인 데이</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=22}"><span>할로윈</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=23}"><span>빼빼로 데이</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=24}"><span>크리스마스</span></a></li>
+                </ul>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#"><span>사진 팁</span></a>
+                <ul>
+                  <li><a href="#" th:href="@{/board/1?cateNum=31}">구도/각도</a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=32}">보정</a></li>
+                </ul>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#"><span>베이킹 클래스 찾기</span></a>
+                <ul>
+                  <li><a href="#" th:href="@{/board/1?cateNum=41}">베이킹 클래스 찾기</a></li>
+                </ul>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#"><span>커뮤니티</span></a>
+                <ul>
+                  <li><a href="#"  th:href="@{/board/1?cateNum=51}">Q&A</a></li>
+                  <li><a href="#"  th:href="@{/board/1?cateNum=52}">자유 게시판</a></li>
+                </ul>
+              </li>
+            </ul>
+      
+          </nav>
+          <!-- 우측상단 아이콘 -->
+          <div class="icon">
+            <ul class="icon_ul">
+              <li><a href="#" class="searchBtn"><i class="fas fa-search"></i></a></li>
+              <li><a href="#" class="memberBtn"><i class="far fa-user"></i></a></li>
+              <li><a href="#" class="alarmBtn"><i class="fa fa-bell"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <div th:fragment="beforeLoginUpm">
+        <ul class="container_member">
+          <li><a href="#" th:href="@{/login}"><span>로그인</span></a></li>
+          <li>|</li>
+          <li><a href="#" th:href="@{/member/add}"><span>회원가입</span></a></li>
+          <li>|</li>
+          <li><a href="#" th:href="@{/findEmailID}"><span>ID/비밀번호 찾기</span></a></li>
+        </ul>
+        <!-- 검색창 -->
+        <div class="container_search">
+              <div class="search">
+                <input class="search textbox" type="text" list="search-options" placeholder="검색어를 입력하세요.">
+                <datalist id="search-options">
+                  <option value="딸기 생크림케이크"></option>
+                  <option value="초코 생크림케이크"></option>
+                  <option value="초코칩 쿠키"></option>
+                  <option value="딸기 생크림케이크"></option>
+                  <option value="사과 모양 케이크"></option>
+                  <option value="파운드케이크"></option>
+              <option value="버터 쿠키"></option>
+            </datalist>
+            <button class="search button">검색</button>
+          </div>
+        </div>
+      </div>-->
+
+    <!-- 회원가입 화면 -->
+    <main>
+        <!-- 회원가입 텍스트 -->
+        <div class="member_join">
+            <b>회원가입</b>
+        </div>
+
+        <!-- 입력사항 텍스트-->
+        <p class="essential">입력사항</p>
+        <!-- 입력사항 내용 -->
+        <div class="member_e">
+            <div class="content m_name">
+                <div class="item name">이름</div>
+                <div class="item2"><input type="text" name="m_e_name" class="m_e_name"></div>
+            </div>
+            <div class="content m_id">
+                <div class="item id">아이디</div>
+                <div class="item2">
+                    <input type="text" name="m_e_id" class="m_e_id">
+                    <button class="id_chk">중복확인</button>
+                    <span>영문, 영문 / 숫자 조합 6~20자 입력 가능</span>
+                </div>
+            </div>
+            <div class="content m_pwd">
+                <div class="item pwd">비밀번호</div>
+                <div class="item2">
+                    <input type="text" name="m_e_pwd" class="m_e_pwd">
+                    <span>최소 하나의 문자, 하나의 숫자 및 하나의 특수 문자 포함 8~20자 입력 가능</span>
+                </div>
+            </div>
+            <div class="content m_pwd_chk">
+                <div class="item pwd_chk">비밀번호 확인</div>
+                <div class="item2"><input type="text" name="m_e_pwd_chk" class="m_e_pwd_chk"></div>
+            </div>
+            <div class="content m_nickname">
+                <div class="item nickname">닉네임</div>
+                <div class="item2">
+                    <input type="text" name="m_ue_nickname" class="m_ue_nickname">
+                    <button class="nickname_chk">중복확인</button>
+                </div>    
+            </div>
+            <div class="content m_phone">
+                <div class="item phone">연락처</div>
+                <div class="item2">
+                    <input type="text" name="m_phone1" class="m_e_phone">
+                    <span class="dash">-</span>
+                    <input type="text" name="m_phone2" class="m_e_phone">
+                    <span class="dash">-</span>
+                    <input type="text" name="m_phone3" class="m_e_phone">
+                </div>
+            </div>
+            <div class="content m_email">
+                <div class="item email">이메일</div>
+                <div class="item2">
+                    <input type="text" name="m_e_email1" class="m_e_email">
+                    <span class="at">@</span>
+                    <input type="text" name="m_e_email2" class="m_e_email">
+                    <button class="email_chk">중복확인</button>
+                </div>
+            </div>
+            <div class="content m_birth">
+                <div class="item birth">생년월일</div>
+                <div class="item2">
+                    <input type="text" name="m_birth" class="m_birth" placeholder="생년월일(YYYYMMDD)">
+                </div>
+            </div>
+            <div class="content m_sex">
+                <div class="item male">성별</div>
+                <div class="item2">
+                    <label for="male">남성</label>
+                    <input type="radio" name="m_e_sex" id="male">
+                    <label for="female">여성</label>
+                    <input type="radio" name="m_e_sex" id="female" checked="checked">
+                </div>
+            </div>
+        </div>
+
+        <!-- 가입하기 버튼 -->
+        <div class="join_cafe">
+            <button class="cafe"><b>가입하기</b></button>
+        </div>
+    </main>
+
+    <!-- 하단 -->
+    <footer>
+        <ul class="menu">
+            <li>HOME CA:BE 운영팀:a@kh.com</li>
+            <li>|</li>
+            <li>이용약관</li>
+            <li>|</li>
+            <li>개인정보취급방침</li>
+        </ul>
+    </footer>
+</body>
+</html>
